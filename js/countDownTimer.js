@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
   // Define a single countdown target date
-  var targetDate = "Sep 8, 2024 16:00:00 GMT-0400";
+  var targetDate = "Sep 21, 2024 16:00:00 GMT-0400";
   var countDownDate = new Date(targetDate).getTime();
 
   // Find all elements with the class 'counterDown-display'
