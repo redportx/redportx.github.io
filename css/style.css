@@ -1,0 +1,48 @@
+
+body{
+    background-color: var(--backgroundColor);
+}
+iframe{
+    max-width: 100%;
+}
+@media only screen and (min-width: 600px) {
+
+.desktop-container{
+    display: block;
+}
+
+#mobile-section{
+    display: none;
+}
+body{
+    padding-top: 70px;
+    width: 100vw;
+    text-align: -webkit-center;
+    
+}
+
+main{
+    max-width: 950px;
+}
+
+
+
+button{
+    background-color: var(--buttonColor);
+    border: none;
+    width: 70px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 300;
+    color: white;
+}
+
+}
+
+@media only screen and (max-width: 599px)  {
+    main{
+        margin-top: 80px;
+    }
+}
+
+

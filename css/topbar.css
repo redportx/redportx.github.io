@@ -1,0 +1,231 @@
+#homePhoto {
+    position: relative;
+    display: inline-block; /* Ensure the div size matches the image */
+}
+
+#homePhoto img {
+    display: block;
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 5px 10px 0px  black;
+    margin-top: 10px;
+}
+
+#rsvp {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+}
+
+@media only screen and (min-width: 600px) {
+
+    .desktop-container{
+    display: block;
+    }
+
+    #mobile-sideBar{
+        display: none;
+    }
+
+    #dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: var(--topBar-color);
+        width: auto;
+        height: auto;
+        list-style: none;
+        padding: 0;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        border: 1px solid #ccc;
+    }
+
+    li #subList {
+        display: none;
+        position: absolute;
+        left: 150px;
+        top: 70px;
+        background-color: var(--topBar-color);
+        list-style: none;
+        width: auto;
+        height: auto;
+        padding: 0;
+    }
+
+    #dropdown-content a {
+        text-decoration: none;
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+    }
+
+    body {
+        display: block;
+        margin: 0;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .desktop-container {
+        background-color: var(--topBar-color);
+        color: var(--txtColor);
+        box-shadow: 0px 0px 10px 0px black;
+    }
+
+    #desktop-topbar,
+    span ul {
+        display: grid;
+        width: 100%;
+        height: 70px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #desktop-topbar span,
+    span ul > li {
+        text-align: center;
+    }
+
+    .topBarSide {
+        margin: 0;
+        padding: 0;
+    }
+
+    span,
+    span > ul > li {
+        height: 100%;
+        align-content: center;
+        list-style: none;
+    }
+
+    #dropdown-content li {
+        align-content: center;
+        width: 150px;
+        height: 70px;
+    }
+
+    #dropdown-content li:not(:last-child) {
+        border-bottom: 1px solid #ccc;
+    }
+
+    span > ul li:hover {
+        background-color: var(--dropdownMenuColor);
+    }
+
+    span > ul li:hover #dropdown-content {
+        display: block;
+    }
+
+    li #firstDateMenu:hover #subList {
+        display: block;
+    }
+
+    h3 {
+        font-size: 1.5em;
+        margin: 0;
+    }
+
+    a {
+        font-size: 1.4em;
+        display: block;
+        height: 100%;
+        text-align: center; /* Ensures the text is horizontally centered */
+        padding: 0 10px; /* Adds some horizontal padding */
+        place-content: center;
+    }
+
+}
+
+@media only screen and (min-width:600px) and (max-width: 999px) {
+
+    a{
+        font-size: medium;
+    }
+    #date-display, .counterDown-display{
+        font-size: large;
+    }
+}
+@media only screen and (max-width:600px){
+
+    
+    .desktop-container{
+        display: none;
+    }
+    body{
+        padding: 0;
+        margin-left: 7px;
+        margin-right: 7px;
+        margin-top: 70px;
+    }
+   
+
+    #mobile-sideBar{
+        position: fixed;
+        display: flex;
+        top: 0;
+        left: 0;
+        background-color: var(--topBar-color);
+        justify-content: space-around; /* Space out #date-display and #menu-toggle */
+        align-items: center; /* Center items vertically */
+        padding: 0;
+        width: 100vw;
+        height: 70px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        z-index: 1000;
+        box-shadow: 0px 0px 10px 0px  black;
+
+    }
+    #date-display, .counterDown-display{
+        margin: 0;
+        font-size: 24px;
+    }
+    #topbar-words{
+        text-align: center;
+    }
+    #menu-toggle{
+        margin-left: 10px;
+        background-color: var(--txtColor);
+        width: 40px;
+        height: 40px;
+        border-style: none;
+        border-radius: 5px;
+        font-size: 23px;
+        box-shadow: 0px 0px 5px 0px black;
+    }
+
+}
+
+@media screen and (max-width: 350px) {
+    #mobile-sideBar #topbar-img{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 260px) {
+    #date-display{
+       font-size: 25px;
+    }
+    .counterDown-display{
+        display: none;
+    }
+   
+}
+
+@media screen and (max-width: 210px) {
+    #date-display{
+        font-size: 20px;
+     }
+}
+@media screen and (max-width: 150px) {
+    #date-display{
+        font-size: 15px;
+     }
+}

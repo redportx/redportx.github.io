@@ -1,0 +1,25 @@
+{
+    
+    "photos": [
+        {
+            "name": "Mollie and Eric's First Christmas",
+            "icon": "/photos/christmas_Photo.jpg"
+        },
+        {
+            "name": "First Date cup",
+            "icon": "/photos/cup.jpg"
+        },
+        {
+            "name": "First Date location",
+            "icon": "/photos/El-Toril.jpg"
+        },
+        {
+            "name": "BOM funny moment",
+            "icon": "/photos/lamb.jpg"
+        },
+        {
+            "name": "Yes to forever",
+            "icon": "/photos/meh.jpg"
+        }
+    ]
+}

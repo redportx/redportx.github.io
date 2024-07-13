@@ -1,0 +1,46 @@
+body{
+    color: var(--txtColor);
+}
+main #firstDate-His{
+    margin-top: 10px;
+    background-color: var(--primary-color);
+    padding: 10px;
+    font-size: 1.5em;
+    text-align: left;
+    text-indent: 50px;
+    box-shadow: 0px 0px 10px 0px  black;
+    margin-bottom: 10px;
+    
+}
+
+#his-story  p{
+    
+    font-size: 24px;
+    background-color: transparent;
+    box-shadow: 0px 0px 0px 0px  black;
+    text-align-last: auto;
+}
+
+#his-story h3{
+    text-align: center;
+}
+@media only screen and (min-width: 600px) {
+
+#El-Toril-photo{
+    width: 40%;
+    float: left;
+    margin-right: 10px;
+}
+
+#lambPhoto{
+    float: left;
+    width: 300px;
+    padding-left: 5px;
+}
+
+}
+@media only screen and (max-width: 599px) {
+    #firstDate-His img{
+        width: 100%;
+    }
+}

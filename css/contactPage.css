@@ -1,0 +1,63 @@
+main #contactPage{
+    font-size: 24px;
+    margin-top: 10px;
+    height: 90dvh;
+    align-content: center;
+}
+
+#content-container{
+    background-color: var(--primary-color);
+    overflow-y: hidden;
+    box-shadow: 0px 0px 10px 0px  black;
+    margin-bottom: 10px;
+    align-content: center;
+    width: 70%;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: -webkit-center;
+
+
+}
+#content-container input,#content-container textarea{
+    border-radius: 10px;
+    max-width: 500px;
+    height: 25px;
+    width: 80%;
+    margin-top: 5px;
+    box-shadow: 0px 0px 3px 0px  black;
+
+
+}
+
+#content-container textarea{
+    height: 150px;
+    resize: none;    
+}
+
+#content-container button {
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 599px) {
+    #content-container{
+        max-width: none;
+        width: 85%;
+        padding: 0;
+        margin: 0;
+    }
+    main #contactPage{
+        font-size: 15px;
+    }
+
+    #content-container input, #content-container textarea{
+        margin: 0;
+        padding: 0;
+    }
+
+}
+
+@media screen and (max-width: 350px) {
+    #content-container{
+        width: 95%;
+    }
+}
