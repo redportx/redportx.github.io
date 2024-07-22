@@ -47,6 +47,8 @@ main #contactPage{
     }
     main #contactPage{
         font-size: 15px;
+        text-align: -webkit-center;
+
     }
 
     #content-container input, #content-container textarea{
