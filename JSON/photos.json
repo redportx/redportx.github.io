@@ -2,6 +2,58 @@
     
     "photos": [
         {
+            "name": "New river gorge coming back from VA",
+            "icon": "photos/newRiverGorge7-21-2024.jpg"
+        },
+        {
+            "name": "Cub Dam Creek",
+            "icon": "photos/yorktownLake7-21-2024.jpg"
+        },
+        {
+            "name": "Cub Dam Creek sign",
+            "icon": "photos/yorktownLakeSign7-21-2024.jpg"
+        },
+        {
+            "name": "Lunch at Kappo Nara Raman",
+            "icon": "photos/kappoNaraRaman7-20-2024.jpg"
+        },
+        {
+            "name": "Lunch at Kappo Nara Raman",
+            "icon": "photos/kappoNaraRamanCouplePhoyo7-20-2024.jpg"
+        },
+        {
+            "name": "Dinner at Jose Tequilas in VA",
+            "icon": "photos/Dinner07-20-2024.jpg"
+        },
+        {
+            "name": "Virginia Aquarium & Marine Science Center",
+            "icon": "photos/VirginiaAquarium&MarineScienceCenter_1.jpg"
+        },
+        {
+            "name": "Virginia Aquarium & Marine Science Center",
+            "icon": "photos/VirginiaAquarium&MarineScienceCenter_2.jpg"
+        },
+        {
+            "name": "Virginia Aquarium & Marine Science Center",
+            "icon": "photos/VirginiaAquarium&MarineScienceCenter_3.jpg"
+        },
+        {
+            "name": "Virginia Aquarium & Marine Science Center",
+            "icon": "photos/VirginiaAquarium&MarineScienceCenter_4.jpg"
+        },
+        {
+            "name": "Virginia Aquarium & Marine Science Center",
+            "icon": "photos/VirginiaAquarium&MarineScienceCenter_5.jpg"
+        },
+        {
+            "name": "Virginia Aquarium & Marine Science Center",
+            "icon": "photos/VirginiaAquarium&MarineScienceCenter_6.jpg"
+        },
+        {
+            "name": "Mollie throwing a whole lemon in my water",
+            "icon": "photos/LemonWater.jpg"
+        },
+        {
             "name": "Mollie and Eric's First Christmas",
             "icon": "/photos/christmas_Photo.jpg"
         },
