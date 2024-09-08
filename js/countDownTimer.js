@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Check if the countdown is finished
-    if (<distance < 0) {
+    if (distance < 0) {
       clearInterval(intervalId);
       countdownElements.forEach(function(element) {
         element.innerHTML = "I love you Mollie❤️";
