@@ -2,8 +2,7 @@ document.getElementById('menu-toggle').addEventListener('click', function() {
     var sidebar = document.getElementById('sidebar-menu');
     var overlay = document.getElementById('overlay');
     
-    // Slide in sidebar and show overlay
-    sidebar.style.transform = "translateX(0%)"; // Brings the sidebar into view
+    sidebar.style.transform = "translateX(0%)"; 
     overlay.style.display = 'block';
 });
 
@@ -11,9 +10,11 @@ document.getElementById('overlay').addEventListener('click', function() {
     var sidebar = document.getElementById('sidebar-menu');
     var overlay = document.getElementById('overlay');
     
-    // Slide out sidebar and hide overlay
-    sidebar.style.transform = "translateX(100%)"; // Hides the sidebar
+
+    mainMenu();
+    sidebar.style.transform = "translateX(100%)"; 
     overlay.style.display = 'none';
+
 });
 
 
@@ -34,4 +35,12 @@ function firstDateMenu(){
     document.getElementById('story-buttons').style.display = 'none'
     document.getElementById('firstDateStory').style.display= 'block'
 
+}
+function closeSidebar() {
+    var sidebar = document.getElementById('sidebar-menu');
+    var overlay = document.getElementById('overlay');
+    
+    mainMenu();
+    sidebar.style.transform = "translateX(100%)";
+    overlay.style.display = 'none';
 }

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zabala Family</title>
+    <link rel="icon" href="icon.jpg">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/topbar.css">
+    <link rel="stylesheet" href="/css/homePage.css">
+    <link rel="stylesheet" href="/css/firstdate-his.css">
+    <link rel="stylesheet" href="/css/firstDate-her.css">
+    <link rel="stylesheet" href="/css/engagmentPage.css">
+    <link rel="stylesheet" href="css/event-details.css">
+    <link rel="stylesheet" href="/css/travelPage.css">
+    <link rel="stylesheet" href="/css/contactPage.css">
+    <link rel="stylesheet" href="/css/mobile-sideBar.css">
+    <link rel="stylesheet" href="/css/photoGallery.css">
+    <style>
+        :root {
+            --primary-color: #DDBE79;
+            --backgroundColor: #E2C78C;
+            --txtColor: #467115;
+            --topBar-color: #F6E7CF;
+            --dropdownMenuColor: #D9DABC;
+            --arrowColor: #156082;
+            --buttonColor: #A67B5B;
+            --buttonTextColor: white;
+            --phoneScreen: 600px;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.34/moment-timezone-with-data.min.js"></script>
+
+</head>
+<body>
+    <header>
+        <div class="desktop-container">
+            <div>
+                <div id="desktop-topbar">
+                    <span>
+                        <ul class="topBarSide">
+                            <!-- Use onclick to handle section navigation -->
+                            <li><a id="homeButton-desktop" onclick="navigateToSection('#homePage')">Home</a></li>
+                            <li>
+                                <a id="story-desktop">Story</a>
+                                <ul id="dropdown-content">
+                                    <li><a onclick="navigateToSection('#engagementStory')">Engagement</a></li>
+                                    <li id="firstDateMenu">
+                                        <a>First Date</a>
+                                        <ul id="subList">
+                                            <li><a onclick="navigateToSection('#firstDate-His')">His</a></li>
+                                            <li><a onclick="navigateToSection('#firstDate-Her')">Hers</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </span>
+                    <span>
+                        <div id="center-section">
+                            <h3 id="date-display">September 14<sup>th</sup> 2024 @ 4:00pm</h3>
+                            <h3 class="counterDown-display">She said yes!</h3>
+                        </div>
+                    </span>
+                    <span>
+                        <ul class="topBarSide">
+                            <!-- Redirect to photoGallery.html when clicked -->
+                            <li><a id="photoGallery-desktop" onclick="window.location.href = 'photoGallery.html'">Photo Gallery</a></li>
+                            <li><a id="registry-desktop" onclick="navigateToSection('#contactPage')">Contact</a></li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
+        </div>
+    
+        <div id="mobile-sideBar">
+            <img id="topbar-img" src="/icon.jpg" alt="" onclick="navigateToSection('#homePage')">
+            <div id="topbar-words">
+                <h3 id="date-display">September 14<sup>th</sup> 2024</h3>
+                <h3 class="counterDown-display">She said yes!</h3>
+            </div>
+            <button id="menu-toggle">&#9776;</button>
+        
+            <div id="sidebar-menu" class="hidden">
+                <img src="/icon.jpg" alt="">
+                <div id="mainMenu">
+                    <ul>
+                        <!-- Updated to match desktop onclick behavior -->
+                        <li><button id="homeButton-mobile" onclick="navigateToSection('#homePage');closeSidebar()">Home</button></li>
+                        <li><button id="photoGallery-mobile" onclick="window.location.href = 'photoGallery.html';closeSidebar()">Photos</button></li>
+                        <li><button id="story-mobile" onclick="storySection()">Story</button></li>
+                        <li><button id="registry-mobile" onclick="navigateToSection('#contactPage');closeSidebar()">Contact</button></li>
+                    </ul>
+                </div>
+                <div id="story-buttons">
+                    <ul>
+                        <li><button id="StorybackBtn-mobile" onclick="mainMenu()">Back</button></li>
+                        <li><button id="First Date-mobile" onclick="firstDateMenu()">First date</button></li>
+                        <li><button id="engagmentPhotoStory-mobile" onclick="navigateToSection('#engagementStory');closeSidebar()">Engagement Story</button></li>
+                    </ul>
+                </div>
+                <div id="firstDateStory">
+                    <ul>
+                        <li><button id="firstDateBackBtn-mobile" onclick="storySection()">Back</button></li>
+                        <li><button id="herStoryBtn-mobile" onclick="navigateToSection('#firstDate-Her');closeSidebar()">Her Story</button></li>
+                        <li><button id="hisStoryBtn-mobile" onclick="navigateToSection('#firstDate-His');closeSidebar()">His Story</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+<main>
+    <div id="overlay"></div>
+    <!-- home page -->
+    <div id="homePage" style="display: none;">
+        <div id="homePhoto" >
+            <img src="photos/christmas_Photo.jpg" alt="">
+            <!-- <button id="rsvp" onclick="rsvpSection()">RSVP</button> -->
+        </div>
+        
+        <p>
+            A place where memories come alive and love is celebrated. Here, you'll find our most cherished moments – from our first date to our engagement story – along with photos that capture our journey together. Explore our story, and thank you for sharing in our happiness!
+            <br><br>
+            With love, 
+            <br>
+            Mollie and Eric
+        </p>
+    </div>
+    
+    <!-- First date: His Story -->
+    <div id="firstDate-His" style="display: none;">
+        <div id="his-story">
+            <h3>First date: His Story</h3>
+            <img id="El-Toril-photo" src="photos/El-Toril.jpg" alt="">
+            <p>
+                We initially met on Tinder. I didn't mean to match with her I didn't think anything of it. Then she messaged me. "Hey! You..., me..., pasta..." or something like that. I didn't really want to go on our first date. I was just sick of people but because Chase used my line "What do you have to lose?" I went on the date. -I'm glad I did.- We went to El Toril. I was so nervous I shook her hand! -I will never live this down.- We went to order food and that happened so quickly I don't even remember what I ordered. -Probably the burrito- All I do remember is that she loved the salsa. I could tell she was a little nervous. Our food came, but she didn't really seem to like the food she got. I offered to have her get something else, but she insisted she was just not hungry. We sat there for what felt like seconds. -It was more like two hours- All I could think about was "I don't want this to end." One of us brought up the idea of doing something else. We got the check I insisted on paying. -I wanted to make a good impression- It was kind of funny when we got outside, I was like do you want to take my car? Before she got in all I remember was telling her to take a photo of my plate to make sure others know who she is with.
+                After this we left EL Toril and went to The Inner Geek. We were laughing the entire time to the point my face hurt for the next two days. Once we got to Huntington we didn’t know where to go so we ended up going to The inner geek we walked around there she had never been anywhere like that. While we were there she took a photo of a lamb with a grenade (photo below).
+            <br>
+                <img id="lambPhoto" src="photos/lamb.jpg" alt="">
+            Then the fire alarm went off and so we left, she said she liked books, so we went to Books-a-million on the way the traffic was really bad, people kept pulling out in front of me so the drink I grabbed for her almost split on her and she was complaining about all the braking. We got to Books-a-Million we went through there for a while then I got her a cup that I’d thought she'd like to make it easier for her to drink and not almost spill it on herself. After we left she wanted ice cream so we started heading back to El Toril. We stopped in Teays Valley to get ice cream. While in there I really enjoyed the surprise ice cream it made it so I could always try something new. I have no idea what they put in it but it was as always… really good. She ended up doing the same thing but asked them to not put anything with mint in it and that was also really good. I think I liked hers a little bit more than I liked mine. After we finished our ice cream we started heading back. I have never gone the speed limit before this in my life… I was going 5 miles under the whole day just so I could have a little more time with her. I would do it again in a heartbeat. We made it back to El Toril I asked her if I could get a kiss. I kissed her goodbye, and we went our separate ways. 
+            </p>
+        </div>
+    </div>
+    
+    <!-- First date: Her Story -->
+    <div id="firstDate-Her" style="display: none;">
+        <div id="her-story">
+            <h3>First date: Her Story</h3>
+            <p> It started on Tinder. He looked like a guy who loved adventures and his bio mentioned homemade noodles, good combo so I swiped right. He agreed and we decided on a restaurant in my town, El Toril. Turns out we both love Mexican food and salsa. I remember pulling up and nervously texting my friend that I was there. After some encouraging words from my BFF, I went in. I saw someone sitting on the left side by himself so I asked if he was Eric and he shook his head yes. Oh boy, here we go, I thought. I walked over introduced myself and.... shook his hand, odd but he's cute so I'll let it slide (I, in fact, did not let this slide lol). We talked for soo long, I couldn't focus because I was so nervous and giddy. I finally ordered something, and we talked some more. I was so nervous it was hard to eat, so I didn't eat much. We ended up talking for so long at one point we were the only ones in the restaurant. (They turned the music up on us because we were too loud, oops) I decided I didn't want the date to end there so I asked if we wanted to do anything else or if he'd like to go home. We decided to do other stuff and loaded into his car. It was so much fun just driving and laughing I also learned that I loved hearing him sing. He wasn't too shabby. We went to Huntington and he showed me this store that had a bunch if books, comics, and figurines in it. I gravitated towards the book section after he walked me around the store. This lead us to end up going to one of my favorite places, Books-a-Million. On the way there I learned that Eric is rough on the brakes, I almost wore my drink several times So to make up for it once at BAM (Books-a-Million), he bought me my own cup. It's now my favorite cup to drink from. 
+            <br>
+            <img id="cupImg" src="photos/cup.jpg" alt="">
+                We then decided to go get ice cream, I love ice cream, so I was super excited. The little shop was cute and had soooo many options; I didn't know what to get. So, when Eric said surprise me, I thought, “Well why not I'll do it too, except for mint, I don't like mint ice cream.” It was really good. -Eric ended up eating my leftovers- Then he drove me home, and I was so happy and comfortable with him that I almost fell asleep in the car on the way back. He was super sweet and funny. When we made it back to my car at El toril we talked for a little while longer and then he asked me for a goodbye kiss. Such a gentleman. I drove home with such a huge smile my face hurt. Our first date was only supposed to go on for a few hours, it ended up being like seven. Worth every second, I'd do it again in a heartbeat. Within a week we had a second date planned, and the rest is history.
+            </p>
+        </div>
+    </div>
+
+    <!-- Engagement Story -->
+    <div id="engagementStory" style="display: none;">
+        <h3>Engagement Story</h3>
+        
+        <p>
+            Eric proposed on our vacation in Tennessee last November. 
+            While on vacation, we had stopped in Kentucky to see Abraham Lincoln's birthplace. We visited his old house and got to see how he once lived as a young boy. It was a fun little pitstop. 
+            We continued on our way and had fun the whole week we were in Tennessee.
+            The last day we were there, we did some last-minute exploration and then decided to head off back home
+            On the way, we stopped at Taco Bell because we both love it. He managed to stick a sauce packet in my jacket pocket without me knowing what it said. He then pointed out some mini sheds and proceeded to challenge me and compare the size of the mini sheds to Abraham Lincoln's house. Well, he was wrong in his comparison, and I was determined to prove it to him, so we went inside of one. While I had my back turned and was going on a rant as to how he was wrong, he got down on one knee. I turned around, and there he was, with a proposal in hand. He told me to read the sauce packet that wad in my pocket "yes to forever" it read. He slipped the ring on my finger and I have never been so happy to lose an argument.
+        </p>
+        <img src="photos/meh.jpg" alt="">
+    </div>
+    
+    
+    <!-- event details -->
+    <div id="eventDetails" style="display: none;">
+
+        <h1>⚠️ This is an alcohol-free wedding. If you are intoxicated, smell of alcohol, or are acting a fool, you will be asked to leave.</h1>
+        <div class="dressCode">
+            <h3>Dress code:</h2> <p id="joke">Pants! If I have to wear them so do you!</p>
+        </div>
+
+    <div class="dressCode">
+        <h3>Males:</h3>
+        <p>        Formal suit. This could be black, gray, blue, or anything like this that is formal.
+        </p>
+    </div>
+	<div class="dressCode">
+        <h3>Females:</h3>
+        <p>
+            Formal dress, any color is acceptable except white or green.
+        </p>
+        <div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12430.729466388762!2d-82.14430695986957!3d38.839734657735825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88489c64dfa3266b%3A0xbbe9cca72d9e5af2!2sAmerican%20Legion!5e0!3m2!1sen!2sus!4v1720649601074!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    </div>
+    
+    <div id="contactPage" style="display: none;">
+        <div id="content-container">
+            <p>If you have any questions please fill out the form below</p>
+            <form
+            action="https://formspree.io/f/xovavajl"
+            method="POST"
+            >
+            <label>
+                Your email: 
+                <br>
+                <input type="email" name="email" placeholder="Emaill@example.com">
+            </label>
+            <label>
+                <br>
+                Your question: 
+                <br>
+                <textarea name="question" placeholder="Your question here..."></textarea>
+            </label>
+            <br>
+            <!-- your other form fields go here -->
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</div>
+
+<script src="/js/countDownTimer.js"></script>
+<script src="/js/sideMenu.js"></script>
+</main>
+
+<script src="/js/sectionSelection.js"></script>
+</body>
+</html>

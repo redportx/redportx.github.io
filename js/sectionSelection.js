@@ -1,119 +1,38 @@
-function homeSection(){
-    document.getElementById("homePage").style.display = 'block';
-    document.getElementById("firstDate-His").style.display = 'none';
-    document.getElementById("firstDate-Her").style.display = 'none';
-    document.getElementById("engagementStory").style.display = 'none';
-    document.getElementById('photoGallery').style.display = 'none';
-    document.getElementById("eventDetails").style.display = 'none';
-    document.getElementById('contactPage').style.display = 'none';
-    document.getElementById('rsvpPage').style.display = 'none'
-    document.getElementById('travelPage').style.display = 'none'
-}
-
-function hisSection(){
-    document.getElementById("homePage").style.display = 'none';
-    document.getElementById("firstDate-His").style.display = 'block';
-    document.getElementById("firstDate-Her").style.display = 'none';
-    document.getElementById("engagementStory").style.display = 'none';
-    document.getElementById('photoGallery').style.display = 'none';
-    document.getElementById("eventDetails").style.display = 'none';
-    document.getElementById('contactPage').style.display = 'none';
-    document.getElementById('rsvpPage').style.display = 'none'
-    document.getElementById('travelPage').style.display = 'none'
-}
+function navigateToSection(hash) {
+    // Update the hash in the URL without reloading
+    location.hash = hash;
+    console.log(location.hash);
+    hash=hash.replace("#","");
     
-function herSection(){
-    document.getElementById("homePage").style.display = 'none';
-    document.getElementById("firstDate-His").style.display = 'none';
-    document.getElementById("firstDate-Her").style.display = 'block';
-    document.getElementById("engagementStory").style.display = 'none';
-    document.getElementById('photoGallery').style.display = 'none';
-    document.getElementById("eventDetails").style.display = 'none';
-    document.getElementById('contactPage').style.display = 'none';
-    document.getElementById('rsvpPage').style.display = 'none'
-    document.getElementById('travelPage').style.display = 'none'
+    // Call the showSection function to display the correct section
+    showSection(hash);
 }
 
-function engagementStory(){
+function showSection(section) {
+    // Hide all sections first
     document.getElementById("homePage").style.display = 'none';
-    document.getElementById("firstDate-His").style.display = 'none';
-    document.getElementById("firstDate-Her").style.display = 'none';
-    document.getElementById("engagementStory").style.display = 'block';
-    document.getElementById('photoGallery').style.display = 'none';
-    document.getElementById("eventDetails").style.display = 'none';
-    document.getElementById('contactPage').style.display = 'none';
-    document.getElementById('rsvpPage').style.display = 'none'
-    document.getElementById('travelPage').style.display = 'none'
-}
-
-function photoGallerySection(){
-    document.getElementById("homePage").style.display = 'none';
-    document.getElementById("firstDate-His").style.display = 'none';
     document.getElementById("firstDate-Her").style.display = 'none';
     document.getElementById("engagementStory").style.display = 'none';
-    document.getElementById('photoGallery').style.display = 'block';
     document.getElementById("eventDetails").style.display = 'none';
     document.getElementById('contactPage').style.display = 'none';
-    document.getElementById('rsvpPage').style.display = 'none'
-    document.getElementById('travelPage').style.display = 'none'
+    document.getElementById("firstDate-His").style.display = 'none';
+    
+    // Show the corresponding section
+    if (section) {
+        document.getElementById(section).style.display = 'block';
+    } else {
+        document.getElementById('homePage').style.display = 'block'; // Default to home
+    }
 }
 
-function rsvpSection(){
-    document.getElementById("homePage").style.display = 'none';
-    document.getElementById("firstDate-His").style.display = 'none';
-    document.getElementById("firstDate-Her").style.display = 'none';
-    document.getElementById("engagementStory").style.display = 'none';
-    document.getElementById('photoGallery').style.display = 'none';
-    document.getElementById("eventDetails").style.display = 'none';
-    document.getElementById('contactPage').style.display = 'none';
-    document.getElementById('rsvpPage').style.display = 'block'
-    document.getElementById('travelPage').style.display = 'none'
+// On page load, check the hash and show the correct section
+window.onload = function() {
+    const hash = window.location.hash.substring(1); // Get the hash without '#'
+    showSection(hash);
 }
 
-function eventDetailsSection(){
-    document.getElementById("homePage").style.display = 'none';
-    document.getElementById("firstDate-His").style.display = 'none';
-    document.getElementById("firstDate-Her").style.display = 'none';
-    document.getElementById("engagementStory").style.display = 'none';
-    document.getElementById('photoGallery').style.display = 'none';
-    document.getElementById("eventDetails").style.display = 'block';
-    document.getElementById('contactPage').style.display = 'none';
-    document.getElementById('rsvpPage').style.display = 'none'
-    document.getElementById('travelPage').style.display = 'none'
-}
-
-function contactSection() {
-    document.getElementById("homePage").style.display = 'none';
-    document.getElementById("firstDate-His").style.display = 'none';
-    document.getElementById("firstDate-Her").style.display = 'none';
-    document.getElementById("engagementStory").style.display = 'none';
-    document.getElementById('photoGallery').style.display = 'none';
-    document.getElementById("eventDetails").style.display = 'none';
-    document.getElementById('contactPage').style.display = 'block';
-    document.getElementById('rsvpPage').style.display = 'none'
-    document.getElementById('travelPage').style.display = 'none'
-}
-
-function travelSection() {
-    document.getElementById("homePage").style.display = 'none';
-    document.getElementById("firstDate-His").style.display = 'none';
-    document.getElementById("firstDate-Her").style.display = 'none';
-    document.getElementById("engagementStory").style.display = 'none';
-    document.getElementById('photoGallery').style.display = 'none';
-    document.getElementById("eventDetails").style.display = 'none';
-    document.getElementById('contactPage').style.display = 'none';
-    document.getElementById('rsvpPage').style.display = 'none'
-    document.getElementById('travelPage').style.display = 'block'
-}
-
-function photoGallerySection() {
-    document.getElementById("homePage").style.display = 'none';
-    document.getElementById("firstDate-His").style.display = 'none';
-    document.getElementById("firstDate-Her").style.display = 'none';
-    document.getElementById("engagementStory").style.display = 'none';
-    document.getElementById('photoGallery').style.display = 'block';
-    document.getElementById("eventDetails").style.display = 'none';
-    document.getElementById('contactPage').style.display = 'none';
-    document.getElementById('rsvpPage').style.display = 'none'
-    document.getElementById('travelPage').style.display = 'none'
+// Handle hash changes (if user clicks on links or changes URL manually)
+window.onhashchange = function() {
+    const hash = window.location.hash.substring(1); // Get the hash without '#'
+    showSection(hash);
 }

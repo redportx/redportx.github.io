@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Zabala Family</title>
+        <link rel="icon" href="icon.jpg">
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/topbar.css">
+        <link rel="stylesheet" href="/css/homePage.css">
+        <link rel="stylesheet" href="/css/firstdate-his.css">
+        <link rel="stylesheet" href="/css/firstDate-her.css">
+        <link rel="stylesheet" href="/css/engagmentPage.css">
+        <link rel="stylesheet" href="css/event-details.css">
+        <link rel="stylesheet" href="/css/travelPage.css">
+        <link rel="stylesheet" href="/css/contactPage.css">
+        <link rel="stylesheet" href="/css/mobile-sideBar.css">
+        <link rel="stylesheet" href="/css/photoGallery.css">
+        <style>
+            :root {
+                --primary-color: #DDBE79;
+                --backgroundColor: #E2C78C;
+                --txtColor: #467115;
+                --topBar-color: #F6E7CF;
+                --dropdownMenuColor: #D9DABC;
+                --arrowColor: #156082;
+                --buttonColor: #A67B5B;
+                --buttonTextColor: white;
+                --phoneScreen: 600px;
+            }
+        </style>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.34/moment-timezone-with-data.min.js"></script>
+    
+    </head>
+    <body>
+
+<header>
+    <div class="desktop-container"  >
+        <div>
+            <div id="desktop-topbar" >
+                    <span>
+                        <ul class="topBarSide">
+                            <li><a id="homeButton-desktop" onclick="location.href = 'index.html#homePage'">Home</a></li>
+                            <li><a id="story-desktop">Story</a>
+                                    <ul id="dropdown-content">
+                                        <li><a onclick="location.href = 'index.html#engagementStory'">Engagement</a></li>
+                                        <li id="firstDateMenu"><a>First Date</a>
+                                            <ul id="subList">
+                                                <li><a onclick="location.href = 'index.html#firstDate-His'">His</a></li>
+                                                <li><a onclick="location.href = 'index.html#firstDate-Her'">Hers</a></li>
+                                            </ul>
+                                    
+                                    </li>
+                                  </ul>
+                              </li>
+                              
+                            
+                        </ul>
+                    </span>
+                    <span>
+                        <div  id="center-section">
+                            <h3 id="date-display">September 14<sup>th</sup> 2024  @ 4:00pm</h3>
+                            <h3 class="counterDown-display">She said yes!</h3>
+                        </div>
+                    </span>
+                    <span>
+                        <ul class="topBarSide">
+                            <li><a id="photoGallery-desktop" >Photo Gallery</a></li>
+                            <li><a id="registry-desktop" onclick="location.href = 'index.html#contactPage'">Contact</a></li>
+                        </ul>
+                    </span>
+                
+                    
+            </div>
+        </div>
+    </div>
+
+    <div id="mobile-sideBar">
+    <img id="topbar-img" src="/icon.jpg" alt="" onclick="location.href = 'index.html#homePage'">
+    <div id="topbar-words">
+        <h3 id="date-display">September 14<sup>th</sup> 2024</h3>
+        <h3 class="counterDown-display">She said yes!</h3>
+    </div>
+    <button id="menu-toggle">&#9776;</button>
+
+    <div id="sidebar-menu" class="hidden">
+        <img src="/icon.jpg" alt="">
+        <div id="mainMenu">
+            <ul>
+                <!-- Updated to match desktop onclick behavior -->
+                <li><button id="homeButton-mobile" onclick="location.href = 'index.html#homePage'">Home</button></li>
+                <li><button id="photoGallery-mobile" onclick="closeSidebar()">Photos</button></li>
+                <li><button id="story-mobile" onclick="storySection()">Story</button></li>
+                <li><button id="registry-mobile" onclick="location.href = 'index.html#contactPage'">Contact</button></li>
+            </ul>
+        </div>
+        <div id="story-buttons">
+            <ul>
+                <li><button id="StorybackBtn-mobile" onclick="mainMenu()">Back</button></li>
+                <li><button id="First Date-mobile" onclick="firstDateMenu()">First date</button></li>
+                <li><button id="engagmentPhotoStory-mobile" onclick="location.href = 'index.html#engagementStory'">Engagement Story</button></li>
+            </ul>
+        </div>
+        <div id="firstDateStory">
+            <ul>
+                <li><button id="firstDateBackBtn-mobile" onclick="storySection()">Back</button></li>
+                <li><button id="hisStoryBtn-mobile" onclick="location.href = 'index.html#firstDate-His'">His Story</button></li>
+                <li><button id="herStoryBtn-mobile" onclick="location.href = 'index.html#firstDate-Her'">Her Story</button></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</header>
+        <main>
+            <div id="overlay"></div>
+        <div id="photoGalleryPage">
+            <div id="photoGallery">
+                <div id="photos-container"></div>
+            </div>
+            
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img01">
+                <div id="caption"></div>
+            </div>
+            
+        </div>
+        <script src="/js/countDownTimer.js"></script>
+        <script src="/js/sideMenu.js"></script>
+        <script src="/js/getPhotos.js"></script>
+    </main>
+</body>
+</html>
