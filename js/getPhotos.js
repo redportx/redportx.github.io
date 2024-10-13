@@ -1,9 +1,11 @@
+let currentIndex=0;
+
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('/JSON/photos.json') // Ensure the correct path
+    fetch('/JSON/honeymoon/cincinnati-zoo.json') // Ensure the correct path
         .then(response => response.json())
         .then(data => {
             const container = document.getElementById('photos-container');
-            data.photos.forEach(photo => {
+            data.photos.forEach((photo,index) => {
                 const photoDiv = document.createElement('div');
                 photoDiv.classList.add('photo');
                 photoDiv.innerHTML = `
@@ -17,26 +19,42 @@ document.addEventListener('DOMContentLoaded', () => {
             const modal = document.getElementById('myModal');
             const modalImg = document.getElementById('img01');
             const captionText = document.getElementById('caption');
-            images.forEach(img => {
+
+            images.forEach((img, index) => {
                 img.onclick = function() {
+                    document.body.style.overflow = 'hidden';
                     modal.style.display = "block";
                     modalImg.src = this.src;
                     captionText.innerHTML = this.alt;
+                    currentIndex=index;
                 }
             });
 
-            // Get the <span> element that closes the modal
-            const span = document.getElementsByClassName('close')[0];
+            document.querySelector('.prev').onclick = function() {
+                currentIndex = currentIndex > 0 ? currentIndex - 1 : images.length - 1;
+                modalImg.src = images[currentIndex].src;
+                captionText.innerHTML = images[currentIndex].alt;
 
-            // When the user clicks on <span> (x), close the modal
+            };
+
+            document.querySelector('.next').onclick = function() {
+                currentIndex = currentIndex < images.length-1 ? currentIndex+1 : 0;
+                modalImg.src = images[currentIndex].src;
+                captionText.innerHTML = images[currentIndex].alt;
+
+
+            };
+
+            const span = document.getElementsByClassName('close')[0];
             span.onclick = function() {
                 modal.style.display = "none";
-            }
+                document.body.style.overflow = 'auto';
+            };
 
-            // When the user clicks anywhere outside of the modal content, close it
             window.onclick = function(event) {
                 if (event.target === modal) {
                     modal.style.display = "none";
+                    document.body.style.overflow = 'auto';
                 }
             }
         })

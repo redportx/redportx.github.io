@@ -64,12 +64,14 @@
 
 .close {
     position: absolute;
-    top: 15px;
-    right: 35px;
+    top: 90px;
+    right: 20px;
     color: #f1f1f1;
     font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
+    padding: 20px;
+    height: auto;
 }
 
 .close:hover,
@@ -89,6 +91,29 @@
     padding: 10px 0;
     
 }
+
+.prev, .next {
+    cursor: pointer;
+    position: fixed;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    transition: 0.6s ease;
+    user-select: none;
+    height: auto;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
 @media screen and (max-width: 950px) {
 
 #photos-container {
