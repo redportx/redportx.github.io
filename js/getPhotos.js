@@ -16,7 +16,12 @@ function clearPhotoContainer() {
 }
 
 function fetchPhotoData(photoPath) {
-    return fetch(`JSON/${photoPath}.json`).then(response => response.json());
+    return fetch(`JSON/${photoPath}.json`).then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    });
 }
 
 function displayPhotos(photos) {
@@ -51,7 +56,7 @@ function attachModalBehavior() {
         navigateModal(1);
     };
 
-    const span = document.getElementById('close');
+    const span = document.querySelector('.close');
     span.onclick = closeModal;
 
     window.onclick = function(event) {
