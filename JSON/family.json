@@ -1,0 +1,26 @@
+{
+    "photos":[
+        {
+            "name": "New River Gorge Summer 2024",
+            "icon": "photos/family/newRiverGorge7-21-2024.jpg"
+        },
+        {
+            "name": "2023 Christmas lights Gallipolis",
+            "icon": "photos/family/christmas_Photo.jpg"
+        },
+        {
+            "name": "Dinner Summer 2024",
+            "icon": "photos/family/Dinner07-20-2024.jpg"
+        },
+        {
+            "name": "Kappo Nara Ramen Summer 2024",
+            "icon": "photos/family/kappoNaraRamanCouplePhoyo7-20-2024.jpg"
+        },
+        {
+            "name": "Virgin Beach Aquarium Summer 2024",
+            "icon": "photos/family/VirginiaAquarium&MarineScienceCenter_6.jpg"
+        }
+        
+
+    ]
+}

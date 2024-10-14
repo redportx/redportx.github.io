@@ -1,6 +1,6 @@
 
 #photoGallery {
-    padding: 20px;
+    padding: 25px;
 }
 
 #photos-container {
@@ -114,6 +114,25 @@
     right: 0;
 }
 
+#photoGallery-groupings{
+    display: grid;
+    grid-auto-flow: column;
+}
+
+#Categories{
+    position: sticky;
+    top: 100px;
+    overflow-y: auto;
+    background-color: var(--topBar-color);
+    height: calc(100vh - 130px);
+}
+#Category-selection{
+    
+    font-size: x-large;
+}
+#Category-selection li{
+    margin-top: 3vh;
+}
 @media screen and (max-width: 950px) {
 
 #photos-container {

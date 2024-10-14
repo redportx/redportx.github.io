@@ -113,24 +113,51 @@
 
 </header>
         <main>
+            <style>
+                body,main{
+                    text-align: unset;
+                    max-width: none;
+                }
+            </style>
             <div id="overlay"></div>
-        <div id="photoGalleryPage">
-            <div id="photoGallery">
-                <div id="photos-container"></div>
+            <div id="photoGallery-groupings">
+                <div class="desktop-container" id="Categories">
+                    <h1>Categories</h1>
+                    <ul id="Category-selection">
+                        
+                        <li id="Family-category" onclick="DisplayPhotos('family')">Family</li>
+
+                        <li id="Wedding" onclick="DisplayPhotos('wedding')">Wedding</li>
+                        
+                        <li>
+                            <ul id="Honeymoon-category">Honeymoon
+                                <li class="honeymoonDropdown" id="Cincinnati-Zoo" onclick="DisplayPhotos('honeymoon/zoo')">Cincinnati-Zoo</li>
+                                <li class="honeymoonDropdown" id="Newport-Aquarium" onclick="DisplayPhotos('honeymoon/aquarium')">Newport-Aquarium</li>
+                            </ul>
+                        </li>
+
+                        <li id="Va-Summer-2024-Catagory" onclick="DisplayPhotos('va_summer_2024')">VA - Summer 2024</li>
+                        <li id="other-Catagory" onclick="DisplayPhotos('other')">other</li>
+                    </ul>
+                </div>
+                <div id="photoGalleryPage">
+                    <div id="photoGallery">
+                        <div id="photos-container"></div>
+                    </div>
+                    
+                    <div id="myModal" class="modal">
+                        <span class="close">&times;</span>
+                        <a class="prev">&#10094;</a>
+                        <img class="modal-content" id="img01">
+                        <a class="next">&#10095;</a>
+                        <div id="caption"></div>
+                        
+                        <!-- Navigation Arrows -->
+                    </div>
+                    
+                    
+                </div>
             </div>
-            
-            <div id="myModal" class="modal">
-                <span class="close">&times;</span>
-                    <a class="prev">&#10094;</a>
-                    <img class="modal-content" id="img01">
-                    <a class="next">&#10095;</a>
-                <div id="caption"></div>
-            
-                <!-- Navigation Arrows -->
-            </div>
-            
-            
-        </div>
         <script src="/js/countDownTimer.js"></script>
         <script src="/js/sideMenu.js"></script>
         <script src="/js/getPhotos.js"></script>
