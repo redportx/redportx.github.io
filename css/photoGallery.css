@@ -133,6 +133,8 @@
 .Category-selection li{
     margin-top: 3vh;
     text-decoration-line: underline;
+    cursor: pointer;
+
 }
 ul li .honeymoonDropdown{
     margin: 0;
@@ -142,7 +144,7 @@ ul li .honeymoonDropdown{
 #Honeymoon-li{
     list-style-type: none;
     text-decoration-line: none;
-
+    cursor: not-allowed;
 }
 @media screen and (max-width: 950px) {
 
