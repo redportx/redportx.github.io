@@ -1,0 +1,34 @@
+{
+    "photos":[
+        {
+            "name": "Wedding photo with Family and Noob",
+            "icon": "/photos/wedding/image0.jpg",
+            "number": 0
+        },
+        {
+            "name": "Wedding photo with Family and Noob",
+            "icon": "/photos/wedding/image1.jpg",
+            "number": 1
+        },
+        {
+            "name": "Wedding Day",
+            "icon": "/photos/wedding/image2.jpg",
+            "number": 2
+        },
+        {
+            "name": "Wedding Day",
+            "icon": "/photos/wedding/image3.jpg",
+            "number": 3
+        },
+        {
+            "name": "Wedding Day",
+            "icon": "/photos/wedding/image4.jpg",
+            "number": 4
+        },
+        {
+            "name": "Wedding Day",
+            "icon": "/photos/wedding/image5.jpg",
+            "number": 5
+        }
+    ]
+}

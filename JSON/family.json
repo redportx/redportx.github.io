@@ -1,13 +1,30 @@
 {
     "photos":[
         {
+            "name": "Mollie petting a shark Cincinnati aquarium",
+            "icon": "photos/family/Mollie-Petting-a-Shark2.jpg"
+        },
+        {
+            "name": "Mollie petting a shark Cincinnati aquarium",
+            "icon": "photos/family/Mollie-Petting-a-Shark.jpg"
+        },
+        {
+            "name": "Mollie petting a shark Cincinnati aquarium",
+            "icon": "photos/family/Eric-Petting-a-Shark.jpg"
+        },
+        {
+            "name": "Group wedding photo",
+            "icon": "photos/family/WeddingDayGroup1.jpg"
+        },
+        {
             "name": "New River Gorge Summer 2024",
             "icon": "photos/family/newRiverGorge7-21-2024.jpg"
         },
         {
-            "name": "2023 Christmas lights Gallipolis",
-            "icon": "photos/family/christmas_Photo.jpg"
+            "name": "Virgin Beach Aquarium Summer 2024",
+            "icon": "photos/family/VirginiaAquarium&MarineScienceCenter_6.jpg"
         },
+        
         {
             "name": "Dinner Summer 2024",
             "icon": "photos/family/Dinner07-20-2024.jpg"
@@ -17,20 +34,9 @@
             "icon": "photos/family/kappoNaraRamanCouplePhoyo7-20-2024.jpg"
         },
         {
-            "name": "Virgin Beach Aquarium Summer 2024",
-            "icon": "photos/family/VirginiaAquarium&MarineScienceCenter_6.jpg"
-        },
-        {
-            "name": "Mollie petting a shark Cincinnati aquarium",
-            "icon": "photos/family/Mollie-Petting-a-Shark.jpg"
-        },
-        {
-            "name": "Mollie petting a shark Cincinnati aquarium",
-            "icon": "photos/family/Mollie-Petting-a-Shark2.jpg"
-        },
-        {
-            "name": "Mollie petting a shark Cincinnati aquarium",
-            "icon": "photos/family/Eric-Petting-a-Shark.jpg"
+            "name": "2023 Christmas lights Gallipolis",
+            "icon": "photos/family/christmas_Photo.jpg"
         }
+        
     ]
 }
