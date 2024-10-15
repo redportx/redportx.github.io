@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="/css/contactPage.css">
         <link rel="stylesheet" href="/css/mobile-sideBar.css">
         <link rel="stylesheet" href="/css/photoGallery.css">
+         <!-- <link rel="stylesheet" href="/css/testfile.css"> -->
         <style>
             :root {
                 --primary-color: #DDBE79;
@@ -121,25 +122,41 @@
             </style>
             <div id="overlay"></div>
             <div id="photoGallery-groupings">
-                <div class="desktop-container" id="Categories">
+                <div id="Categories">
                     <h1>Categories</h1>
                     <ul class="Category-selection">
-                        
                         <li id="Family-category" onclick="DisplayPhotos('family')">Family</li>
-
                         <li id="Wedding" onclick="DisplayPhotos('wedding')">Wedding</li>
                         
-                        <li id="Honeymoon-li">Honeymoon
-                            <ul id="Honeymoon-category">
+                        <!-- Honeymoon Dropdown -->
+                        <li id="Honeymoon-li" class="dropdown">
+                            Honeymoon
+                            <ul id="Honeymoon-category" class="dropdown-content">
                                 <li class="honeymoonDropdown" id="Cincinnati-Zoo" onclick="DisplayPhotos('honeymoon/zoo')">Cincinnati Zoo</li>
                                 <li class="honeymoonDropdown" id="Newport-Aquarium" onclick="DisplayPhotos('honeymoon/aquarium')">Newport Aquarium</li>
                             </ul>
                         </li>
-
-                        <li id="Va-Summer-2024-Catagory" onclick="DisplayPhotos('va_summer_2024')">VA - Summer 2024</li>
-                        <li id="other-Catagory" onclick="DisplayPhotos('other')">other</li>
+                
+                        <li id="Va-Summer-2024-Category" onclick="DisplayPhotos('va_summer_2024')">VA - Summer 2024</li>
+                        <li id="other-Category" onclick="DisplayPhotos('other')">Other</li>
                     </ul>
                 </div>
+                <div class="dropdown">
+                    <button class="dropdown-btn" onclick="dropdownMenu('dropdown-selection')">Select Category</button>
+                    <div class="dropdown-selection" style="display: none;">
+                        <a onclick="DisplayPhotos('family')">Family</a>
+                        <a onclick="DisplayPhotos('wedding')">Wedding</a>
+                        <a onclick="dropdownMenu('dropdown-Honeymoon')">Honeymoon</a>
+                        <div class="dropdown-Honeymoon" style="display: none; ">
+                        <a onclick="DisplayPhotos('honeymoon/zoo')">Cincinnati-Zoo</a>
+                        <a onclick="DisplayPhotos('honeymoon/aquarium')">Cincinnati-Aquarium</a>
+                        </div>
+                        <a onclick="DisplayPhotos('va_summer_2024')">Summer 2024</a>
+                        <a onclick="DisplayPhotos('other')">Other</a>
+                    </div>
+                </div>
+                
+                
                 <div id="photoGalleryPage">
                     <div id="photoGallery">
                         <div id="photos-container"></div>
@@ -161,6 +178,7 @@
         <script src="/js/countDownTimer.js"></script>
         <script src="/js/sideMenu.js"></script>
         <script src="/js/getPhotos.js"></script>
+        
     </main>
 </body>
 </html>

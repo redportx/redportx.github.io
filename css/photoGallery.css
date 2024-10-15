@@ -125,6 +125,7 @@
     overflow-y: auto;
     background-color: var(--topBar-color);
     height: calc(100vh - 130px);
+    width: 270px;
 }
 .Category-selection{
     
@@ -146,6 +147,59 @@ ul li .honeymoonDropdown{
     text-decoration-line: none;
     cursor: not-allowed;
 }
+
+
+/* Style for the dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    justify-self: center;
+}
+
+/* Style for the dropdown button */
+.dropdown-btn {
+    display: none;
+    background-color: var(--topBar-color);
+    color: var(--txtcolor);
+    padding: 10px;
+    font-size: 16px;
+    border: solid black;
+    width: 150px;
+    text-align: center;
+}
+.dropdown-selection a,.dropdown-Honeymoon a {
+    color: var(--txtcolor);
+    border-bottom: solid black;
+
+}
+/* Style for the dropdown content */
+.dropdown-selection {
+    position: absolute;
+    background-color: var(--topBar-color);
+    min-width: 250px; 
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin-left: -50px;
+    z-index: 1;
+    border: solid black;
+}
+
+/* Style for each dropdown item */
+.dropdown-selection a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    text-align: center;
+
+}
+.dropdown-Honeymoon{
+    margin: 0;
+}
+
+.dropdown-Honeymoon a{
+     background-color: lightgray;
+}
+
 @media screen and (max-width: 950px) {
 
 #photos-container {
@@ -153,6 +207,27 @@ ul li .honeymoonDropdown{
     
 }
 
+}
+@media screen and (max-width: 670px) {
+    #Categories{
+        display: none;
+    }
+    #Categories-dropdown{
+        display: block;
+        height: 50px;
+        text-align: center;
+        background-color: red;
+    }
+    select option{
+        width: 300px;
+    }
+    #photoGallery-groupings{
+        grid-auto-flow: row;
+    }
+    .dropdown-btn{
+        display: block;
+    }
+    
 }
 @media screen and (max-width: 465px) {
 

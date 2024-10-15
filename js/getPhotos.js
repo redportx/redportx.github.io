@@ -1,6 +1,7 @@
 let currentIndex = 0;
 
 function DisplayPhotos(photoPath) {
+    closeAllDropdowns();
     clearPhotoContainer();
     fetchPhotoData(photoPath)
     .then(data => {
@@ -29,12 +30,14 @@ function displayPhotos(photos) {
     photos.forEach((photo, index) => {
         const photoDiv = document.createElement("div");
         photoDiv.classList.add('photo');
+        // Adding the 'loading="lazy"' attribute to the image element
         photoDiv.innerHTML = `
-            <img src="${photo.icon}" alt="${photo.name}">
+            <img src="${photo.icon}" alt="${photo.name}" loading="lazy">
         `;
         container.appendChild(photoDiv);
     });
 }
+
 
 function attachModalBehavior() {
     const images = document.querySelectorAll('.photo img');
@@ -93,3 +96,22 @@ function navigateModal(direction) {
 document.addEventListener('DOMContentLoaded', () => {
     DisplayPhotos('family');
 });
+
+
+
+function dropdownMenu(menuClass) {
+    let menu = document.querySelector(`.${menuClass}`);
+    if (menu.style.display === 'block') {
+        menu.style.display = 'none';
+    } else {
+        menu.style.display = 'block';
+    }
+}
+
+// Function to close all dropdown menus
+function closeAllDropdowns() {
+    let dropdowns = document.querySelectorAll('.dropdown-selection, .dropdown-Honeymoon');
+    dropdowns.forEach(function(dropdown) {
+        dropdown.style.display = 'none';
+    });
+}
